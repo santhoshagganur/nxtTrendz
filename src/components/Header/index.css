@@ -1,0 +1,33 @@
+/* Write your CSS code here */
+.home-navbar {
+  display: flex;
+  justify-content: space-between;
+}
+
+.home-page-app-logo {
+  height: 50px;
+  background-size: cover;
+}
+
+.nav-items-container {
+  display: flex;
+  list-style-type: none;
+}
+
+.nav-item {
+  font-family: Roboto;
+  font-size: 15px;
+  color: #64748b;
+  margin-right: 10px;
+}
+
+.logout-button {
+  background-color: #0b69ff;
+  border-width: 0;
+  color: #ffffff;
+  font-size: 12px;
+  border-radius: 5px;
+  width: 70px;
+  height: 30px;
+  margin-top: 10px;
+}

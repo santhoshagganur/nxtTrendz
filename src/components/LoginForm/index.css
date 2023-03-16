@@ -1,0 +1,64 @@
+/* Write your CSS code here */
+.login-form-bg-container {
+  background-color: #ffffff;
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  height: 100vh;
+  justify-content: flex-end;
+}
+
+.login-page-image {
+  height: 50vh;
+  background-size: cover;
+  margin-right: 50px;
+}
+
+.login-card {
+  box-shadow: 5px #d7dfe9;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  justify-content: center;
+}
+
+.app-login-logo {
+  height: 60px;
+  background-size: cover;
+  margin: 20px;
+}
+
+.label-text {
+  font-family: Roboto;
+  font-size: 15px;
+  color: #475569;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+
+.input-element {
+  height: 30px;
+  background-color: #d7dfe9;
+  border-width: 1px;
+  margin-bottom: 20px;
+}
+
+.login-button {
+  background-color: #0b69ff;
+  color: #ffffff;
+  font-size: 12px;
+  border-width: 0;
+  border-radius: 5px;
+  text-align: center;
+  padding: 10px;
+}
+
+.login-user-elements {
+  display: flex;
+  flex-direction: column;
+}
+
+.error-msg {
+  color: red;
+  font-size: 12px;
+}
