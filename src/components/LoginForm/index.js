@@ -8,11 +8,17 @@ class LoginForm extends Component {
   state = {
     username: '',
     password: '',
+    showError: false,
+    errorMsg: '',
   }
 
   onSubmitSuccess = () => {
     const {history} = this.props
     history.replace('/')
+  }
+
+  onFailure = errorMsg => {
+    this.setState({showError: true, errorMsg})
   }
 
   submitForm = async event => {
@@ -27,6 +33,8 @@ class LoginForm extends Component {
     const response = await fetch(url, options)
     if (response.ok === true) {
       this.onSubmitSuccess()
+    } else {
+      this.onFailure()
     }
   }
 
@@ -77,6 +85,8 @@ class LoginForm extends Component {
   }
 
   render() {
+    const {showError, errorMsg} = this.state
+
     return (
       <Link to="/login">
         <div className="login-form-bg-container">
@@ -103,7 +113,7 @@ class LoginForm extends Component {
             <button type="submit" className="login-button">
               Login
             </button>
-            <p className="error-msg"> {this.showError()} </p>
+            {showError && <p className="error-msg"> *{errorMsg} </p>}
           </form>
         </div>
       </Link>
